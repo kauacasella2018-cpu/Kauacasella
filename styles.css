@@ -474,3 +474,220 @@ transition: all 0.5s ease;
     color: #ffffff;
     font-size: 0.9rem;
 }
+
+@media (max-width: 1024px) {
+
+    h1 {
+        font-size: 3.8rem;
+    }
+
+    .foto-perfil {
+        width: 280px;
+        height: 280px;
+    }
+
+    .projetos-caixa {
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    }
+
+    .habilidade-caixa {
+        grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    }
+}
+
+
+/* TABLET / CELULAR GRANDE (até 768px) */
+@media (max-width: 768px) {
+
+    /* MENU */
+    .navegacao {
+        padding: 1rem;
+    }
+
+    .menu {
+        flex-direction: column;
+        gap: 1rem;
+        text-align: center;
+    }
+
+    /* CABEÇALHO */
+    .cabecalho {
+        padding-top: 120px;
+        text-align: center;
+    }
+
+    .foto-perfil {
+        width: 220px;
+        height: 220px;
+    }
+
+    h1 {
+        font-size: 3rem;
+    }
+
+    .cabecalho-sub-titulo {
+        font-size: 1.4rem;
+    }
+
+    .botao-fale-comigo {
+        font-size: 1.3rem;
+    }
+
+    /* SOBRE */
+    .sobre {
+        padding: 5rem 1rem;
+    }
+
+    .sobre-caixa {
+        padding: 1.5rem;
+    }
+
+    .apresentacao {
+        font-size: 2rem;
+    }
+
+    .sobre-paragrafo, .sobre-paragrafo1 {
+        font-size: 1.1rem;
+    }
+
+    /* PROJETOS */
+    .projetos-caixa {
+        grid-template-columns: 1fr;
+        padding: 1rem;
+    }
+
+    .projetos-imagem {
+        height: 180px;
+    }
+
+    /* HABILIDADES */
+    .habilidade-caixa {
+        grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+        padding: 1rem;
+    }
+
+    .habilidades-imagem {
+        width: 60%;
+        height: 70px;
+        margin-top: 10%;
+    }
+
+    /* FORMULÁRIO */
+    .formualrio-contato {
+        width: 90%;
+        padding: 1.5rem;
+    }
+
+    /* FOOTER */
+    .footer-container {
+        flex-direction: column;
+        text-align: center;
+        gap: 20px;
+    }
+
+}
+
+
+/* CELULAR (até 480px) */
+@media (max-width: 480px) {
+
+    h1 {
+        font-size: 2.2rem;
+    }
+
+    .foto-perfil {
+        width: 180px;
+        height: 180px;
+    }
+
+    .cabecalho-sub-titulo {
+        font-size: 1.1rem;
+    }
+
+    .botao-fale-comigo {
+        padding: 10px 20px;
+        font-size: 1.1rem;
+    }
+
+    .apresentacao {
+        font-size: 1.6rem;
+        line-height: 1;
+    }
+
+    .sobre-titulo,
+    .projetos-titulos,
+    .habilidades-titulos,
+    .entre-contato {
+        font-size: 2rem;
+    }
+
+    .sobre-caixa {
+        padding: 1rem;
+    }
+
+    .projetos-card,
+    .Habilidades-CARD {
+        padding: 10px;
+    }
+
+    .habilidades-imagem {
+        width: 70%;
+        height: 60px;
+    }
+
+    .campo-form {
+        font-size: 0.9rem;
+    }
+
+    .footer-copy {
+        font-size: 0.8rem;
+    }
+}
+.menu-hamburguer {
+    display: none;
+    font-size: 2.5rem;
+    cursor: pointer;
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    z-index: 2000;
+}
+
+/* Gaveta fechada */
+.menu-gaveta {
+    position: fixed;
+    top: 0;
+    right: -260px;
+    width: 250px;
+    height: 100%;
+    background: #111;
+    padding-top: 60px;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    transition: 0.3s ease-in-out;
+    z-index: 1999;
+}
+
+.menu-gaveta a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.4rem;
+    padding-left: 20px;
+}
+
+.menu-gaveta.aberto {
+    right: 0;
+}
+
+/* Exibir hambúrguer apenas no mobile */
+@media (max-width: 768px) {
+    .menu-hamburguer {
+        display: block;
+    }
+
+    /* Esconder o menu de navegação original */
+    .navegacao {
+        display: none;
+    }
+}

@@ -11,6 +11,19 @@
 
 
 <body>
+    <div class="menu-hamburguer" onclick="toggleMenu()">
+    ☰
+</div>
+
+<!-- MENU LATERAL (GAVETA) -->
+<nav id="menu-gaveta" class="menu-gaveta">
+    <a href="#inicio">Início</a>
+    <a href="#sobre">Sobre</a>
+    <a href="#projetos">Projetos</a>
+    <a href="#habilidades">Habilidades</a>
+    <a href="#contato">Contato</a>
+</nav>
+</nav>
 
     <nav class="navegacao">
         <ul class="menu">
@@ -197,6 +210,11 @@
 
     <p class="footer-copy">© 2025 Kauã Kazélla. Todos os direitos reservados.</p>
 </footer>
+<script>
+function toggleMenu() {
+    document.getElementById("menu-gaveta").classList.toggle("aberto");
+}
+</script>
 </body>
 
 </html>
