@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Dev Club Portfolio </title>
+    <link rel="stylesheet" href="styles.css">
+
+</head>
+
+
+<body>
+
+    <nav class="navegacao">
+        <ul class="menu">
+            <li>
+                <a href="#inicio" class="menu-link">Início</a>
+            </li>
+            <li>
+                <a href="#sobre" class="menu-link">Sobre</a>
+            </li>
+            <li>
+                <a href="#Projetos" class="menu-link">Projetos</a>
+            </li>
+            <li>
+                <a href="#Habilidade0" class="menu-link">Habilidades</a>
+            </li>
+            <li>
+                <a href="#contatos" class="menu-link">Contato</a>
+            </li>
+        </ul>
+
+    </nav>
+    <main id="inicio" class="cabecalho">
+
+        <img src="./imagem/imagem1.webp" alt="c" class="foto-perfil">
+        <h1> Kauã Casella </h1>
+        <p class="cabecalho-sub-titulo"> Front End Developer</p>
+
+        <button type="submit" class="botao-fale-comigo"> 
+            <li>
+                <a href="#contatos" class="menu-link">Fale comigo</a>
+            </li>
+        </button>
+
+    </main>
+
+
+
+    <section id="sobre" class="sobre">
+
+        <h2 class="sobre-titulo"> Sobre mim </h2>
+        <div class="sobre-caixa">
+            <p class="apresentacao">Olá! Sou Kauã Casella
+
+            <p class="sobre-paragrafo ">
+                Tenho 18 anos e atualmente curso Ciência da Computação na
+                FECAP. Possuo experiência em HTML, CSS e Java, e hoje atuo como desenvolvedor Front-end — com o objetivo
+                de,
+                futuramente, evoluir para a área de Full-stack.
+            <p class="sobre-paragrafo1 ">
+
+                Além das habilidades técnicas, também tenho fluência em inglês, tanto técnico quanto conversacional. Sou
+                um desenvolvedor focado em criar aplicações web modernas, eficientes e orientadas à boa experiência do
+                usuário. Meu objetivo é entregar soluções que unam performance, qualidade e design intuitivo.
+            </p>
+
+            </p>
+        </div>
+    </section>
+
+
+    <section id="Projetos" class="Projetos">
+        <h2 class="projetos-titulos"> Meus Projetos </h2>
+        <div class="projetos-caixa">
+
+
+            <div class="projetos-card">
+                <img src="./imagem/imagem1.webp" alt="Projeto 1" class="projetos-imagem">
+                <div class="caixa-textos-projetos">
+                    <h3 class="info-projetos">PROJETO1</h3>
+                    <p class="paragrafo-projetos">TMJ.
+                    </p>
+                </div>
+            </div>
+
+            <div class="projetos-card">
+                <img src="./imagem/imagem2.jpg" alt="Projeto 1" class="projetos-imagem">
+                <div class="caixa-textos-projetos">
+                    <h3 class="info-projetos">PROJETO2</h3>
+                    <p class="paragrafo-projetos">TMJ.
+                    </p>
+                </div>
+            </div>
+
+            <div class="projetos-card">
+                <img src="./imagem/imagem2.jpg " alt="Projeto 2" class="projetos-imagem">
+                <div class="caixa-textos-projetos">
+                    <h3 class="info-projetos">PROJETO3 </h3>
+                    <p class="paragrafo-projetos">TMJ
+                    </p>
+                </div>
+            </div>
+
+
+
+
+        </div>
+
+    </section>
+
+    <section id="Habilidade0" class="Habilidade0">
+        <h2 class="habilidades-titulos"> Minhas Habilidades </h2>
+        <div class="habilidade-caixa">
+
+
+            <div class="Habilidades-CARD">
+                <img src="./html-5.png" alt="Habilidade 1 " class="habilidades-imagem">
+                <div class="caixa-textos-projetos">
+                    <h3 class="info-habilidade">HTML5</h3>
+                </div>
+            </div>
+
+            <div class="Habilidades-CARD">
+                <img src="./css-3.png" alt="habilidade 2" class="habilidades-imagem">
+                <div class="caixa-textos-projetos">
+                    <h3 class="info-habilidade">CSS3</h3>
+
+                </div>
+            </div>
+
+            <div class="Habilidades-CARD">
+                <img src="./imagem/js.png" alt="habilidade 3" class="habilidades-imagem">
+                <div class="caixa-textos-projetos">
+                    <h3 class="info-habilidade">JavaScript </h3>
+
+                </div>
+            </div>
+
+
+    </section>
+
+    <section id="contatos" class="contatos">
+        <h2 class="entre-contato">Entre em Contato</h2>
+
+        <form class="formualrio-contato" id="formualrio" onsubmit="enviarWhats(event)">
+            <div class="grupo-form">
+                <input placeholder="Nome" class="campo-form" id="nome">
+            </div>
+
+            <div class="grupo-form">
+                <textarea class="campo-form" placeholder="Digite sua mensagem" rows="5" id="mensagem"></textarea>
+            </div>
+            <button type="submit" class="botao-form">Enviar Whatsapp</button>
+        </form>
+
+    </section>
+
+    <script>
+     function enviarWhats(event) {
+    event.preventDefault();  // Corrigido!
+
+    const nome = document.getElementById("nome").value;
+    const mensagem = document.getElementById("mensagem").value;
+
+    const telefone = "5511965403578";
+
+    const texto = `Olá! me chamo ${nome}. ${mensagem}`;
+    const msgFormatada = encodeURIComponent(texto);
+
+    const url = `https://wa.me/${telefone}?text=${msgFormatada}`;
+
+    window.open(url, "_blank");
+}
+
+    </script>
+
+
+<footer class="footer">
+    <div class="footer-container">
+
+        <div class="footer-section">
+            <h3>Kauã Casella</h3>
+            <p>Desenvolvedor focado em criar soluções web de alta performance</p>
+        </div>
+
+        <div class="footer-section">
+            <h3>Contato</h3>
+            <p><a href="mailto:kauacasella2018@gmail.com">kauacasella2018@gmail.com</a></p>
+            <p><a href="tel:+5511965403578">(11) 96540-3578</a></p>
+        </div>
+
+    </div>
+
+    <hr>
+
+    <p class="footer-copy">© 2025 Kauã Kazélla. Todos os direitos reservados.</p>
+</footer>
+</body>
+
+</html>
