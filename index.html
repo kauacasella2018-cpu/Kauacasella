@@ -12,18 +12,18 @@
 
 <body>
     <div class="menu-hamburguer" onclick="toggleMenu()">
-    ☰
-</div>
+        ☰
+    </div>
 
-<!-- MENU LATERAL (GAVETA) -->
-<nav id="menu-gaveta" class="menu-gaveta">
-    <a href="#inicio">Início</a>
-    <a href="#sobre">Sobre</a>
-    <a href="#projetos">Projetos</a>
-    <a href="#habilidades">Habilidades</a>
-    <a href="#contato">Contato</a>
-</nav>
-</nav>
+    <!-- MENU LATERAL (GAVETA) -->
+    <nav id="menu-gaveta" class="menu-gaveta">
+        <a href="#inicio">Início</a>
+        <a href="#sobre">Sobre</a>
+        <a href="#projetos">Projetos</a>
+        <a href="#habilidades">Habilidades</a>
+        <a href="#contato">Contato</a>
+    </nav>
+    </nav>
 
     <nav class="navegacao">
         <ul class="menu">
@@ -51,7 +51,7 @@
         <h1> Kauã Casella </h1>
         <p class="cabecalho-sub-titulo"> Front End Developer</p>
 
-        <button type="submit" class="botao-fale-comigo"> 
+        <button type="submit" class="botao-fale-comigo">
             <li>
                 <a href="#contatos" class="menu-link">Fale comigo</a>
             </li>
@@ -70,8 +70,7 @@
             <p class="sobre-paragrafo ">
                 Tenho 18 anos e atualmente curso Ciência da Computação na
                 FECAP. Possuo experiência em HTML, CSS e Java, e hoje atuo como desenvolvedor Front-end — com o objetivo
-                de,
-                futuramente, evoluir para a área de Full-stack.
+                de, futuramente, evoluir para a área de Full-stack.
             <p class="sobre-paragrafo1 ">
 
                 Além das habilidades técnicas, também tenho fluência em inglês, tanto técnico quanto conversacional. Sou
@@ -80,6 +79,7 @@
             </p>
 
             </p>
+
         </div>
     </section>
 
@@ -99,11 +99,18 @@
             </div>
 
             <div class="projetos-card">
-                <img src="./imagem/1.png" alt="Projeto 1" class="projetos-imagem">
+                <img src="./imagem/Captura de tela 2025-11-14 123408.png" alt="Projeto 1" class="projetos-imagem">
                 <div class="caixa-textos-projetos">
-                    <h3 class="info-projetos">Landing Page para Pizzaria Artesanal</h3>
-                    <p class="paragrafo-projetos">Site em desenvolvimento.
+                    <h3 class="info-projetos">TechSkill</h3>
+                    <p class="paragrafo-projetos">Este projeto apresenta uma página de login moderna e estilizada,
+                        criada com foco em estética, experiência do usuário e responsividade. A interface combina um
+                        design minimalista com um fundo temático retrô-noturno, trazendo um clima imersivo inspirado em
+                        cultura urbana e automobilística..
                     </p>
+                    <button type="button" class="entre-no-projeto" onclick="abrirProjeto()">
+                        PROJETO
+                    </button>
+
                 </div>
             </div>
 
@@ -171,49 +178,61 @@
     </section>
 
     <script>
-     function enviarWhats(event) {
-    event.preventDefault();  // Corrigido!
+        function enviarWhats(event) {
+            event.preventDefault();  // Corrigido!
 
-    const nome = document.getElementById("nome").value;
-    const mensagem = document.getElementById("mensagem").value;
+            const nome = document.getElementById("nome").value;
+            const mensagem = document.getElementById("mensagem").value;
 
-    const telefone = "5511965403578";
+            const telefone = "5511965403578";
 
-    const texto = `Olá! me chamo ${nome}. ${mensagem}`;
-    const msgFormatada = encodeURIComponent(texto);
+            const texto = `Olá! me chamo ${nome}. ${mensagem}`;
+            const msgFormatada = encodeURIComponent(texto);
 
-    const url = `https://wa.me/${telefone}?text=${msgFormatada}`;
+            const url = `https://wa.me/${telefone}?text=${msgFormatada}`;
 
-    window.open(url, "_blank");
-}
+            window.open(url, "_blank");
+        }
 
     </script>
 
 
-<footer class="footer">
-    <div class="footer-container">
 
-        <div class="footer-section">
-            <h3>Kauã Casella</h3>
-            <p>Desenvolvedor focado em criar soluções web de alta performance</p>
+    <footer class="footer">
+        <div class="footer-container">
+
+            <div class="footer-section">
+                <h3>Kauã Casella</h3>
+                <p>Desenvolvedor focado em criar soluções web de alta performance</p>
+            </div>
+
+            <div class="footer-section">
+                <h3>Contato</h3>
+                <p><a href="mailto:kauacasella2018@gmail.com">kauacasella2018@gmail.com</a></p>
+                <p><a href="tel:+5511965403578">(11) 96540-3578</a></p>
+            </div>
+
         </div>
 
-        <div class="footer-section">
-            <h3>Contato</h3>
-            <p><a href="mailto:kauacasella2018@gmail.com">kauacasella2018@gmail.com</a></p>
-            <p><a href="tel:+5511965403578">(11) 96540-3578</a></p>
-        </div>
+        <hr>
 
-    </div>
+        <p class="footer-copy">© 2025 Kauã Kazélla. Todos os direitos reservados.</p>
+    </footer>
+    <script>
+        function toggleMenu() {
+            document.getElementById("menu-gaveta").classList.toggle("aberto");
+        }
 
-    <hr>
 
-    <p class="footer-copy">© 2025 Kauã Kazélla. Todos os direitos reservados.</p>
-</footer>
+    </script>
 <script>
-function toggleMenu() {
-    document.getElementById("menu-gaveta").classList.toggle("aberto");
-}
+    function toggleMenu() {
+        document.getElementById("menu-gaveta").classList.toggle("aberto");
+    }
+
+    function abrirProjeto() {
+        window.location.href = "https://kauacasella2018-cpu.github.io/TechSkill";
+    }
 </script>
 </body>
 

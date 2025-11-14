@@ -203,7 +203,7 @@ h1 {
     text-align: center;
     font-size: 2.5rem;
     margin-bottom: 50px;
-    position: relative; /* NECESSÁRIO para o ::after */
+    position: relative; 
 }
 
 .projetos-titulos::after {
@@ -270,14 +270,39 @@ h1 {
 
 }
 
+ .entre-no-projeto {
 
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: aliceblue;
+    padding: 6px 10px;
+    font-size: 15px;
+    background-color: #2f63ca;
+    color: #fff;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    margin-top: 20px;
+
+
+}
+
+.entre-no-projeto:hover{
+    box-shadow: -1px 0px 30px 4px #2f63ca;
+    background-color: rgb(25, 25, 63);
+    transition: 0.5s
+  
+}
+
+.entre-no-projeto:active{
+    background-color: #0a1527;
+}
 
 
 .habilidades-titulos {
     text-align: center;
     font-size: 2.5rem;
     margin-bottom: 50px;
-    position: relative; /* necessário para o ::after */
+    position: relative; 
 }
 
 .habilidades-titulos::after {
@@ -286,7 +311,7 @@ h1 {
     height: 10px;
     background: #2f63ca;
     border-radius: 10px;
-
+    
     position: absolute;
     left: 50%;
     transform: translateX(-50%);
